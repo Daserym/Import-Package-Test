@@ -1,0 +1,19 @@
+version = 1
+revision = 1
+requires-python = ">=3.12"
+
+[[package]]
+name = "import-package-test"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "package-test" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "package-test", git = "https://github.com/Daserym/Package-Test.git" }]
+
+[[package]]
+name = "package-test"
+version = "0.1.0"
+source = { git = "https://github.com/Daserym/Package-Test.git#4d2c53f3db1c9b0ca0d8e6c60bcc4a970217f134" }
